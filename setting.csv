@@ -1,0 +1,44 @@
+,0,,,,,,,
+project_folder,/home/ziyz1701/storage/CD_airfoil/AIAA_2023_paper_plot/,# The path of the project folder,,,,,,
+save_folder,"/home/ziyz1701/storage/CD_airfoil/AIAA_2023_paper_plot/",# save directory of the data
+########## Freestream ############,,,,,,,,
+M_exp,0.05, #experimental mach number
+M_PF,0.2 ,#Powerflow simulated mach number
+chord,0.1356, #chord length
+U_0,16.0, #freestream velocity
+density,16.0, #density
+########## Coherence settings ############,,,,,,,,
+nb_chunks,18, #number of windows
+nb_through_flow_times,12, #number of through flow times to start at
+coherence_variable,'y_velocity'
+########## Coherence probe location ############,,,,,,,,
+delta_x_3,0.004, #space interval between probes in meters
+probe_list,"['m4', 'm3', 'm2', 'm1', '0', 'p1', 'p2', 'p3', 'p4']"
+########## Pressure (or Wall Shear) plot ############,,,,,,,,
+folder_list,"['3D-CD-2011-extended-time/','3D_2011_CD_shear_layer_refined/','no_slip_wall_0p12c_trip_shifted_full_ver2/','2D_freefield/','2D_lips/']"
+name_list,"['3D DNS','3D DNS-SLR','3D DNS-SLRT','2D DNS free field','2D DNS lips']"
+profile_color,"['black','darkorange','red','magenta','blue']"
+linestyle_list,"['-','--','-.','-','-']",#used when markers are used for the 2D case
+linestyle_list_b,"['-','--','-.','-',':']",#used when lines are used for the 2D case
+marker_list,"['','','','s','^']"
+marker_size,35
+########## Plot setting ############,,,,,,,,
+linewidth_3D_result,6.0,#linewidth used to plot the 3D simulation results
+linewidth_2D_result,3.0,#for 2D
+linewidth_list,"[6.0,6.0,6.0,9.0,6.0]",#list of linewidth (Last setting : [6.0,6.0,6.0,2.0,6.0]
+fontsize_var,45,#font size (Last setting : 38)
+plot_size_square,"(13,13)"
+plot_size_rectangle,"(16,13)"
+########## BL velocity plot ############,,,,,,,,
+probe_number_list,"[5,9,21,25]"
+U_ref_list,"[16.6144,16.5944,16.7114,16.8178,16.3226]",U_ref of DNS,DNS-SLR,DNS-SLRT,2D Lip,2D freefield in that order
+U_inf_list,"[16.57,16.50,16.54,16.70,15.92]",U_inf (nozzle centerline) of DNS,DNS-SLR,DNS-SLRT,2D Lip,2D freefield in that order
+U_avg,"[16.4,16.4,16.4,16.4,16.0]",area weighted average velocity of DNS,DNS-SLR,DNS-SLRT,2D Lip,2D freefield in that order
+########## Wall PSD plot settings ############,,,,,,,,
+wall_name_list,"['3D DNS','3D DNS-SLR','3D DNS-SLRT','3D DNS Damping corrected']"
+expt_probe_list,"[1,2,3,5,6,9,21,23,24,25,26,27,28]",#list of probes in the experimental array
+plot_list,"[3,5,9,21,25]",#list of probes to plot wall pressure for
+tstart_cfd,"0.119",#time to start taking cfd data
+tend_cfd,"0.219",#time to end cfd data at
+expt_fs,"25600",#sampling frequency used to acquire wall pressure
+data_folder_list,"['reference_dns/','cfd_shear_layer_refined/','cfd_refined_tripped/','2d_freefield/','2d_lips/']"
